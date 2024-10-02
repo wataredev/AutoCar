@@ -24,7 +24,7 @@ function Body({
                 <div className="carro-detalhes">
                   <h3>{carro.marca} | {carro.modelo}</h3>
                   <p>Ano: {carro.ano}</p>
-                  <p>Preço: {carro.preco}</p>
+                  <p>Preço: R${carro.preco}</p>
                 </div>
 
                 <div className="carro-acoes">
