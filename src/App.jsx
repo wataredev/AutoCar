@@ -8,10 +8,10 @@ const url = "http://localhost:3000/carros";
 
 function App() {
   const [carros, setCarros] = useState([]);
-  const [nome, setNome] = useState("");
   const [preco, setPreco] = useState("");
   const [modelo, setModelo] = useState("");
   const [ano, setAno] = useState("");
+  const [marca, setMarca] = useState("");
   const [editId, setEditId] = useState(null);
 
   useEffect(() => {
@@ -25,11 +25,15 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const carros = {nome, preco: parseFloat(preco), ano: parseInt(ano), modelo};
+    const carros = {
+      preco: parseFloat(preco),
+      ano: parseInt(ano),
+      modelo,
+      marca,
+    };
 
     let responsivo;
   };
-  
 
   return (
     <>
@@ -39,12 +43,13 @@ function App() {
         handleEdit={handleEdit}
         handleDelete={handleDelete}
         preco={preco}
-        setNome={setNome}
         setPreco={setPreco}
         ano={ano}
         setAno={setAno}
         modelo={modelo}
         setModelo={setModelo}
+        marca={marca}
+        setMarca={setMarca}
         handleSubmit={handleSubmit}
       />
       <Footer />
