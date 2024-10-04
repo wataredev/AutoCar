@@ -6,7 +6,9 @@ import Header from "./components/Header"; // Importação do componente Header
 
 const url = "http://localhost:3000/carros"; // URL da API local que gerencia os carros
 
+
 function App() {
+
   // Definição dos estados para os atributos dos carros e controle de edição
   const [carros, setCarros] = useState([]); // Estado para armazenar os carros
   const [preco, setPreco] = useState(""); // Estado para o preço do carro
@@ -121,7 +123,6 @@ function App() {
     <>
       {/* Renderiza o componente Header */}
       <Header />
-      
       {/* Renderiza o componente Body e passa as props necessárias */}
       <Body
         carros={carros} // Lista de carros
